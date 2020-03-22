@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
     <version>1.0.1</version>
     <name>${project.groupId}:${project.artifactId}</name>
-    <description>Spring Rest Enhancement</description>
+    <description>Spring RestTemplate Enhancement</description>
     <url>https://github.com/stoneforever/rest-proxy-spring-boot-starter.git</url>
 
     <properties>
@@ -20,6 +20,12 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
     </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.5.RELEASE</version>
+    </parent>
 
     <licenses>
         <license>
@@ -69,17 +75,23 @@
     <dependencies>
 
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>5.2.4.RELEASE</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <scope>compile</scope>
-            <version>5.2.3.RELEASE</version>
-            <optional>true</optional>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -89,8 +101,12 @@
         </dependency>
         <dependency>
             <groupId>com.github.stoneforever</groupId>
-            <artifactId>rest-proxy-spring-boot-starter</artifactId>
+            <artifactId>rest-proxy</artifactId>
             <version>1.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
         </dependency>
         
     </dependencies>
