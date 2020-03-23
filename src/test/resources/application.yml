@@ -1,0 +1,5 @@
+econage:
+  rest-proxy:
+    enabled: true
+    basePackages:
+      - com.econage
