@@ -25,6 +25,7 @@ import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.DefaultUriBuilderFactory;
 
 import java.util.List;
 
@@ -43,8 +44,16 @@ public class RestProxyConfiguration {
 
     @Bean
     @ConditionalOnMissingBean
-    public RestTemplate restTemplate(RestTemplateBuilder builder, CloseableHttpClient httpClient) {
+    public RestTemplate restTemplate(
+            RestProxyProperties restProxyProperties,
+            RestTemplateBuilder builder,
+            CloseableHttpClient httpClient
+    ) {
+        DefaultUriBuilderFactory uriFactory = new DefaultUriBuilderFactory();
+        uriFactory.setEncodingMode(restProxyProperties.getEncodingMode());
+
         return builder
+                .uriTemplateHandler(uriFactory)
                 .requestFactory( ()->new HttpComponentsClientHttpRequestFactory(httpClient) )
                 .build();
     }

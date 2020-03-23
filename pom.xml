@@ -8,7 +8,7 @@
     <groupId>com.github.stoneforever</groupId>
     <artifactId>rest-proxy-spring-boot-starter</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>Spring RestTemplate Enhancement</description>
     <url>https://github.com/stoneforever/rest-proxy-spring-boot-starter.git</url>
