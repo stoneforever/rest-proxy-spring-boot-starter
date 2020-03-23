@@ -1,7 +1,7 @@
 package com.flowyun.cornerstone.web.restproxy.spring.boot.autoconfigure;
 
+import com.flowyun.cornerstone.web.restproxy.scanner.RestProxyScannerConfigurer;
 import com.flowyun.cornerstone.web.restproxy.spring.boot.httppool.HttpClientFactoryBean;
-import com.econage.core.web.extension.restproxy.scanner.RestProxyScannerConfigurer;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -61,7 +61,7 @@ public class RestProxyConfiguration {
 
     /**
      * 仅扫描Spring boot相同的位置。如果想要更多设置，可以使用
-     * {@link com.econage.core.web.extension.restproxy.annotations.RestProxyScan}
+     * {@link com.flowyun.cornerstone.web.restproxy.annotations.RestProxyScan}
      */
     public static class AutoConfiguredRestProxyScannerRegistrar implements BeanFactoryAware, ImportBeanDefinitionRegistrar {
 
