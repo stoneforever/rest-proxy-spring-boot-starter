@@ -1,6 +1,6 @@
-package com.econage.core.web.extension.restproxy.spring.boot.autoconfigure;
+package com.flowyun.cornerstone.web.restproxy.spring.boot.autoconfigure;
 
-import com.econage.core.web.extension.restproxy.httppool.HttpClientFactoryBean;
+import com.flowyun.cornerstone.web.restproxy.spring.boot.httppool.HttpClientFactoryBean;
 import com.econage.core.web.extension.restproxy.scanner.RestProxyScannerConfigurer;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.slf4j.Logger;

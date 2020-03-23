@@ -1,4 +1,4 @@
-package com.econage.core.web.extension.restproxy.httppool;
+package com.flowyun.cornerstone.web.restproxy.spring.boot.httppool;
 
 
 import javax.net.ssl.X509TrustManager;

@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.stoneforever</groupId>
+    <groupId>com.flowyun</groupId>
     <artifactId>rest-proxy-spring-boot-starter</artifactId>
     <packaging>jar</packaging>
     <version>1.0.2</version>

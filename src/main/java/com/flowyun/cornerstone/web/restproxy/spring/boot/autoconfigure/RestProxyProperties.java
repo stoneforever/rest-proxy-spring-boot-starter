@@ -1,7 +1,7 @@
-package com.econage.core.web.extension.restproxy.spring.boot.autoconfigure;
+package com.flowyun.cornerstone.web.restproxy.spring.boot.autoconfigure;
 
 
-import com.econage.core.web.extension.restproxy.httppool.HttpClientProperties;
+import com.flowyun.cornerstone.web.restproxy.spring.boot.httppool.HttpClientProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.web.util.DefaultUriBuilderFactory;
 
