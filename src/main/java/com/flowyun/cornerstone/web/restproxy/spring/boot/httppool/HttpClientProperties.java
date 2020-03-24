@@ -1,12 +1,9 @@
 package com.flowyun.cornerstone.web.restproxy.spring.boot.httppool;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-
-
 public class HttpClientProperties {
     private int timeToLiveInMinus = 10;
-    private int connectionMaxTotal = 2000;
-    private int connectionMaxPerRoute = 200;
+    private int connectionMaxTotal = 1000;
+    private int connectionMaxPerRoute = 100;
     private int socketTimeout = 5*60*1000;
     private int connectTimeout = 60 * 1000;
     private int connectionRequestTimeout = 60*1000;
