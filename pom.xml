@@ -8,7 +8,7 @@
     <groupId>com.flowyun</groupId>
     <artifactId>rest-proxy-spring-boot-starter</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>Spring RestTemplate Enhancement</description>
     <url>https://github.com/stoneforever/rest-proxy-spring-boot-starter.git</url>
@@ -24,7 +24,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.5.RELEASE</version>
+        <version>2.2.6.RELEASE</version>
     </parent>
 
     <licenses>
@@ -102,6 +102,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+            <optional>true</optional>
         </dependency>
 
         <dependency>
